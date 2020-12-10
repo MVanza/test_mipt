@@ -6,10 +6,20 @@ df = pd.DataFrame()
 for i in range(N):
     d = np.array(list(map(int, input().split())))
     df[f'string{i}'] = d.transpose()
-summ = 0
+# 1
+S = 0
+V = 0
+maximum = 0
 for i in range(N):
-    d = df[df[f'string{i}'] < -5]
-    d1 = d.loc[:, f'string{i}'].values
-    summ += len(d1)
+    # 1
+    ds = df[df[f'string{i}'] < -5]
+    S += len(ds.loc[:, f'string{i}'].values)
+    # 2
+    dv = df[df[f'string{i}'] < 0]
+    V += sum(dv.loc[:, f'string{i}'].values)
 
-print(summ)
+# 3
+m = df.max().values
+print(S)
+print(abs(V))
+print(max(m))
