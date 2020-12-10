@@ -1,8 +1,8 @@
 import pandas as pd
 from collections import Counter
 
-df1 = pd.read_csv(import(), delimiter=';')
-df2 = pd.read_csv(import(), delimiter=';')
+df1 = pd.read_csv(input(), delimiter=';')
+df2 = pd.read_csv(input(), delimiter=';')
 d = df2.merge(df1, on='id')
 lst = []
 company_name = []
