@@ -11,7 +11,6 @@ for i in range(1, len(d['id'].unique())+1):
     lst.append([m, d.loc[d['id'] == i, 'name'].unique()[0]])
     if m > 8:
         company_name.append(d.loc[d['id'] == i, 'company'].unique()[0])
-print(lst)
 c = Counter(company_name)
 lst.sort()
 print(lst[-1][1], f'{lst[-1][0]:.3f}')
